@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="../static/css/homepage.css" media="screen">
+    <link rel="shortcut icon" href="#"/>
+    <title>登录页面</title>
+</head>
+<body>
+<div class="box-head">
+    <img src="../static/images/8313654.png" alt="方寸图标">
+</div>
+<div class="container">
+    <div class="row">
+        <div id="contain">
+            <h1>请登录</h1>
+            <form action="/login/" method="post">
+                <label for="account" class="col-sm-2 control-label"></label>
+                <div style="padding-left:120px" class="div-bor1">
+                    <i class="icon-user"></i>
+                    <input class="psw" style="width:200px;height:24px" type="text" name="account" id="account" placeholder="Account">
+                </div>
+                <label for="inputPassword3" class="col-sm-2 control-label"></label>
+                <div class="div-bor2" style="padding-left:120px">
+                    <i class="icon-user2"></i>
+                    <input class="psw" style="width:200px;height:25px" type="password" name="pwd" id="inputPassword3" placeholder="Password">
+                </div>
+                <div>
+                    <label>
+                        <input style="margin-left:120px" type="checkbox"> 记住我
+                    </label>
+                </div>
+                <div>
+                    <button class="btn" type="submit">登录</button>
+                </div>
+                <p class="login_err">{{ error }}</p>
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+  &copy; August 2020, Test of Tih Electronic
+  <br>
+  Automatic test, add, delete, modify, check.
+</footer>
+</body>
+</html>

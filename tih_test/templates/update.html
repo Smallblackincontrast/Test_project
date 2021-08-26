@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更新数据</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/update.css" media="screen">
+    <link rel="shortcut icon" href="#"/>
+</head>
+<body>
+<div class="box-head">
+    <img style="height:100px;width:260px" src="../static/images/8313654.png" alt="方寸图标">
+</div>
+<div class="box-left">
+    <nav>
+        <div class="box-div">
+            <img src="/static/images/ionicons-5.1.2.designerpack/body.svg">
+            <a href="/home/">首页</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/add.svg">
+            <a href="/increase/">添加成员</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/person.svg">
+            <a href="/display/">用户管理</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/arrow-forward-circle-sharp.svg">
+            <a href="/burnin_result/">BurnIn结果</a>
+        </div>
+    </nav>
+</div>
+<div class="box-main">
+    <div class="box-search">
+        <form method="post" action="/check/">
+            <span>部门：</span>
+            <i class="icon-department"></i>
+            <input class="box-search-input" type="text" list="dep_lists" name="department" placeholder="department">
+            <datalist id="dep_lists">
+                <option>测试部</option>
+                <option>驱动开发部</option>
+            </datalist>
+            <span>性别：</span>
+            <i class="icon-sex"></i>
+            <input class="box-search-input" type="text" list="sexlists" name="sex" placeholder="sex">
+            <datalist id="sexlists">
+                <option>男</option>
+                <option>女</option>
+            </datalist>
+            <input type="submit" value="查询">
+        </form>
+    </div>
+    <div class="box-main-form">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="box-main-table">
+                <tr class="table_title">
+                    <th>ID</th>
+                    <th>Account</th>
+                    <th>Password</th>
+                    <th>Name</th>
+                    <th>Sex</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Remark</th>
+                </tr>
+                <tr>
+                    <td>{{ date_list.0 }}</td>
+                    <td>
+                        <input type="text" name="account" value="{{ date_list.1 }}">
+                    </td>
+                    <td>
+                        <input type="text" name="password" value="{{ date_list.2 }}">
+                    </td>
+                    <td>
+                        <input type="text" name="name" value="{{ date_list.3 }}">
+                    </td>
+                    <td>
+                        <div>
+                            <input id="sex" type="text" list="sexlist" name="sex" placeholder="{{ date_list.4 }}">
+                            <input name="sex_null" type="hidden" value="{{ date_list.4 }}">
+                            <datalist id="sexlist">
+                                <option>男</option>
+                                <option>女</option>
+                            </datalist>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <input id="department" type="text" list="dep_list" name="department"
+                                   placeholder="{{ date_list.5 }}">
+                            <input name="depart_null" type="hidden" value="{{ date_list.5 }}">
+                            <datalist id="dep_list">
+                                <option>测试部</option>
+                                <option>驱动开发部</option>
+                            </datalist>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="text" name="email" value="{{ date_list.6 }}">
+                    </td>
+                    <td>
+                        <input type="text" name="remark" value="{{ date_list.7 }}">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color:#66CCFF" class="td_align" colspan="9"><strong>成员信息表</strong></td>
+                </tr>
+            </table>
+            <input style="margin-top:5px" type="submit" value="保存">
+            <button type="button"><a href="/display/">返回</a></button>
+        </form>
+    </div>
+</div>
+<footer>
+    &copy; August 2020, Test of Tih Electronic
+    <br>
+    Automatic test, add, delete, modify, check.
+</footer>
+</body>
+</html>
+
+

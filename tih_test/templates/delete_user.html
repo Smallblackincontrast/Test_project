@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除成员</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/delete_user.css" media="screen">
+    <link rel="shortcut icon" href="#"/>
+</head>
+<body>
+    <div id="header">
+        <img src="../static/images/8313654.png" alt="方寸图标">
+        <img id="headerImg" src="../static/images/20200817103025.png" alt="用芯维护国家信息安全" width="1550px" height="150px">
+    </div>
+
+    <div id="del">
+        <h1 style="text-align: center;">请输入要删除成员的账号</h1>
+        <form action="/delete/" method="post">
+            {% csrf_token %}   <!--加入这行 -->
+            <p>
+                <span style="display:inline-block;width:100px;text-align:right;">姓名:</span>
+                <input type="text" name="delete_u">
+                <input type="submit" value="删除">
+            </p>
+            <p class="login_err">{{ error }}</p>
+        </form>
+    </div>
+
+    <div id="footer">
+      &copy; August 2020, Test of Tih Electronic
+      <br>
+      Automatic test, add, delete, modify, check.
+    </div>
+
+</body>
+</html>

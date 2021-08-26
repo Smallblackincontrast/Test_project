@@ -1,0 +1,42 @@
+body {
+	font-family:            Verdana, Helvetica, Arial, sans-serif;
+	line-height:            1.6em;
+	font-size:              small;
+	background:             #efe5d0 url("../images/background1.gif") top left;
+
+}
+
+#header {
+    background-color:       #F5F5DC;
+    margin:                 10px;
+    height:                 150px;
+}
+
+#header img#headerImg {
+    float:                  right;
+}
+
+#del {
+    border:                 1px solid #000000;
+    margin:                 50px 700px;
+    line-height:            1.6em;
+    padding:                20px;
+    width:                  400px;
+    float:                  center;
+    border-radius:          25px;
+
+}
+
+#footer {
+  background-color:         #675c47;
+  color:                    #efe5d0;
+  text-align:               center;
+  padding:                  15px;
+  margin:                   300px 10px 10px 10px;
+  font-size:                90%;
+}
+
+.login_err {
+    text-align:                     center;
+    color:                          red;
+}

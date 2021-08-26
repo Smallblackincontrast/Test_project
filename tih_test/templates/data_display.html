@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/date_display.css" media="screen">
+    <link rel="shortcut icon" href="#"/>
+</head>
+<body>
+<div class="box-head">
+    <img style="height:100px;width:260px" src="../static/images/8313654.png" alt="方寸图标">
+</div>
+<div class="box-left">
+    <nav>
+        <div class="box-div">
+            <img src="/static/images/ionicons-5.1.2.designerpack/body.svg">
+            <a href="/home/">首页</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/add.svg">
+            <a href="/increase/">添加成员</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/person.svg">
+            <a href="/display/">用户管理</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/arrow-forward-circle-sharp.svg">
+            <a href="/burnin_result/1">BurnIn结果</a>
+        </div>
+    </nav>
+</div>
+<div class="box-main">
+    <div class="box-search">
+        <form method="post" action="/check/">
+            <span>部门：</span>
+            <i class="icon-department"></i>
+            <input class="box-search-input" id="department" type="text" list="dep_list" name="department"
+                   placeholder="department" autocomplete="off">
+            <datalist id="dep_list">
+                <option>测试部</option>
+                <option>驱动开发部</option>
+            </datalist>
+            <span>性别：</span>
+            <i class="icon-sex"></i>
+            <input class="box-search-input" id="sex" type="text" list="sexlist" name="sex" placeholder="sex"
+                   autocomplete="off">
+            <datalist id="sexlist">
+                <option>男</option>
+                <option>女</option>
+            </datalist>
+            <input type="submit" value="查询">
+        </form>
+    </div>
+    <div class="box-main-table">
+        <table>
+            <tr class="table_title">
+                <th>ID</th>
+                <th>Account</th>
+                <th>Password</th>
+                <th>Name</th>
+                <th>Sex</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>Remark</th>
+                <th>Operation</th>
+            </tr>
+            {% for datas in data_list %}
+            <tr>
+                <td class="td_align">{{ datas.0 }}</td>
+                <td class="td_align">{{ datas.1 }}</td>
+                <td class="td_align">{{ datas.2 }}</td>
+                <td class="td_align">{{ datas.3 }}</td>
+                <td class="td_align">{{ datas.4 }}</td>
+                <td class="td_align">{{ datas.5 }}</td>
+                <td class="td_align">{{ datas.6 }}</td>
+                <td class="td_align">{{ datas.7 }}</td>
+                <td>
+                    <a class="a_update" href="/update/?id={{ datas.0 }}">修改</a>
+                    <a class="a_delete" href="/delete/?id={{ datas.0 }}" onclick="return confirm('确定要删除吗？')">删除</a>
+                </td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td style="background-color:#66CCFF" class="td_align" colspan="9"><strong>成员信息表</strong></td>
+            </tr>
+        </table>
+        <form method="post" action="/display/">
+
+            <!--            <input type="submit" value="发送">-->
+        </form>
+    </div>
+</div>
+
+<footer>
+    &copy; August 2020, Test of Tih Electronic
+    <br>
+    Automatic test, add, delete, modify, check.
+</footer>
+</body>
+</html>

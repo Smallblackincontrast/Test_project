@@ -1,0 +1,175 @@
+body {
+    background: #efe5d0 url("../images/background1.gif") top left;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+    font-size: small;
+    margin: 0px auto;
+}
+
+.box-head {
+    height: 100px;
+    background-color: #99FFFF;
+}
+
+.box-left {
+    width: 200px;
+    height: 800px;
+    background-color: lightcyan;
+    float: left;
+}
+
+.box-left a {
+    color: black;
+    font-size: 1.6em;
+}
+
+.box-div {
+    border: 1px solid #000000;
+    margin-top: 2px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.box-left div:hover {
+    background-color: #99FFFF
+}
+
+.box-left img {
+    width: 25px;
+    height: 25px;
+
+}
+
+.box-main {
+    display: absolute;
+    height: 800px;
+    background: url("../images/main.jpg") top left;
+    margin-left: 205px;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.box-table-add {
+    position: absolute;
+    border: 1px solid #000000;
+    line-height: 1.6em;
+    width: 400px;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-top: 70px;
+}
+
+footer {
+    background-color: #675c47;
+    color: #efe5d0;
+    text-align: center;
+    padding: 15px;
+    margin: 5px 0px;
+    font-size: 90%;
+}
+
+.box-search {
+    position: absolute;
+    border: 1px thin #33FFFF;
+    background-color: #3399FF;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px 5px;
+    opacity: 0.8;
+    border-radius: 20px;
+}
+
+.box-search-input {
+    width: 150px;
+    height: 25px;
+    padding-left: 32px;
+}
+
+.icon-name {
+    position: absolute;
+    left: 0 ；z-index: 4;
+    background-image: url("../images/name.png");
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-account {
+    position: absolute;
+    left: 0 ；z-index: 5;
+    background-image: url("../images/account.png");
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-password {
+    position: absolute;
+    left: 0 ；z-index: 5;
+    background-image: url("../images/password.png");
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-department {
+    position: absolute;
+    left: 0 ；z-index: 5;
+    background-image: url("../images/department.png");
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-sex {
+    position: absolute;
+    left: 0 ；z-index: 5;
+    background-image: url("../images/sex.png");
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-email {
+    position: absolute;
+    left: 0 ；z-index: 5;
+    background-image: url("../images/email.png");
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-remark {
+    position: absolute;
+    left: 0 ；z-index: 5;
+    background-image: url("../images/remark.png");
+    background-repeat: no-repeat;
+    background-position: 1px 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.input_css {
+    width: 150px;
+    height: 25px;
+}
+
+.div-bor {
+    margin-bottom: 5px;
+}
+
+a:link {
+    color: #b76666;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #675c47;
+    text-decoration: none;
+}

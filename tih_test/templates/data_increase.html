@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加成员信息</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/date_increase.css" media="screen">
+    <link rel="shortcut icon" href="#"/>
+</head>
+<body>
+<div class="box-head">
+    <img style="height:100px;width:260px" src="../static/images/8313654.png" alt="方寸图标">
+</div>
+
+<div class="box-left">
+    <nav>
+        <div class="box-div">
+            <img src="/static/images/ionicons-5.1.2.designerpack/body.svg">
+            <a href="/home/">首页</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/add.svg">
+            <a href="/increase/">添加成员</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/person.svg">
+            <a href="/display/">用户管理</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/arrow-forward-circle-sharp.svg">
+            <a href="/burnin_result/1">BurnIn结果</a>
+        </div>
+    </nav>
+</div>
+<div class="box-main">
+    <div class="box-search">
+        <form method="post" action="/check/">
+            <span>部门：</span>
+            <i class="icon-department"></i>
+            <input class="box-search-input" id="department" type="text" list="dep_list" name="department"
+                   autocomplete="off" placeholder="department">
+            <datalist id="dep_list">
+                <option>测试部</option>
+                <option>驱动开发部</option>
+            </datalist>
+            <span>性别：</span>
+            <i class="icon-sex"></i>
+            <input class="box-search-input" id="sex" type="text" list="sexlist" name="sex" placeholder="sex"
+                   autocomplete="off">
+            <datalist id="sexlist">
+                <option>男</option>
+                <option>女</option>
+            </datalist>
+            <input type="submit" value="查询">
+        </form>
+    </div>
+    <div class="box-table-add">
+        <h1 style="text-align: center">请输入要添加的成员信息</h1>
+        <form action="/increase/" method="post">
+            {% csrf_token %}   <!--加入这行 -->
+            <div class="div-bor" style="padding-left:100px;padding-right:20px">
+                <i class="icon-account"></i>
+                <input class="input_css" style="padding-left:32px" type="text" name="account" placeholder="account">
+            </div>
+            <div class="div-bor" style="padding-left:100px;padding-right:20px">
+                <i class="icon-password"></i>
+                <input class="input_css" style="padding-left:32px" type="text" name="password" placeholder="password">
+            </div>
+            <div class="div-bor" style="padding-left:100px;padding-right:20px">
+                <i class="icon-name"></i>
+                <input class="input_css" style="padding-left:32px" type="text" name="name" placeholder="name">
+            </div>
+            <div class="div-bor" style="padding-left:100px;padding-right:20px">
+                <i class="icon-sex"></i>
+                <input class="input_css" style="padding-left:32px" type="text" name="sex" placeholder="sex">
+            </div>
+            <div class="div-bor" style="padding-left:100px;padding-right:20px">
+                <i class="icon-department"></i>
+                <input class="input_css" style="padding-left:32px" type="text" name="department"
+                       placeholder="department">
+            </div>
+            <div class="div-bor" style="padding-left:100px;padding-right:20px">
+                <i class="icon-email"></i>
+                <input class="input_css" style="padding-left:32px" type="text" name="email" placeholder="email">
+            </div>
+            <div class="div-bor" style="padding-left:100px;padding-right:20px">
+                <i class="icon-remark"></i>
+                <input class="input_css" style="padding-left:32px" type="text" name="remark" placeholder="remark">
+            </div>
+            <input style="width:100px; margin: 5px 70px;" type="submit" value="提交">
+            <button type="button" style="width:100px;"><a href="/display/">返回</a></button>
+        </form>
+    </div>
+</div>
+<footer>
+    &copy; August 2020, Test of Tih Electronic
+    <br>
+    Automatic test, add, delete, modify, check.
+</footer>
+</body>
+</html>

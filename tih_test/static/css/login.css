@@ -1,0 +1,77 @@
+body {
+	font-family:                    Verdana, Helvetica, Arial, sans-serif;
+	line-height:                    1.6em;
+	font-size:                      small;
+    background:                     #efe5d0 url("../images/background1.gif") top left;
+}
+
+#header {
+    width:                          1900px;
+    background-color:               #F5F5DC;
+    margin:                         10px;
+    height:                         150px;
+}
+
+h1 {
+    text-align:                     center;
+}
+
+.div-bor1 {
+    position:                       relative;width: 200px;
+    margin-bottom:                  10px;
+}
+.div-bor2 {
+    position:                       relative;width: 200px;
+    margin-bottom:                  10px;
+}
+
+#contain {
+    border:                         1px solid #000000;
+    margin:                         50px 700px;
+    padding-bottom:                 10px;
+
+}
+
+.icon-user {
+    position:                       absolute;left: 0；z-index:4;
+    background-image:               url("../images/20200819151107.png");
+    background-repeat:              no-repeat;
+    background-position:            1px 1px;
+    width:                          30px;
+    height:                         30px;
+}
+
+.icon-user2 {
+    position:                       absolute;left: 0；z-index:5;
+    background-image:               url("../images/20200819151346.png");
+    background-repeat:              no-repeat;
+    background-position:            1px 1px;
+    width:                          30px;
+    height:                         30px;
+}
+
+.psw {
+    padding-left:                   32px;
+}
+
+.btn {
+    margin-left:                    120px;
+    min-width:                      60px;
+    padding:                        5px 8px;
+    background:                     #fff;
+    color:                          #4daff9;
+    border:                         1px solid #4daff9;
+}
+
+.login_err {
+    text-align:                     center;
+    color:                          red;
+}
+footer {
+  background-color:         #675c47;
+  color:                    #efe5d0;
+  text-align:               center;
+  padding:                  15px;
+  margin:                   300px 10px 10px 10px;
+  font-size:                90%;
+}

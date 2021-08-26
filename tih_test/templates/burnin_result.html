@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BurnIn_Result</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/date_display.css" media="screen">
+    <link rel="shortcut icon" href="#"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 上述meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="box-head">
+    <img style="height:100px;width:260px" src="../static/images/8313654.png" alt="方寸图标">
+</div>
+<div class="box-left">
+    <nav>
+        <div class="box-div">
+            <img src="/static/images/ionicons-5.1.2.designerpack/body.svg">
+            <a href="/home/">首页</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/add.svg">
+            <a href="/increase/">添加成员</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/person.svg">
+            <a href="/display/">用户管理</a>
+        </div>
+        <div class="box-div">
+            <img src="../static/images/ionicons-5.1.2.designerpack/arrow-forward-circle-sharp.svg">
+            <a href="/burnin_result/1">BurnIn结果</a>
+        </div>
+    </nav>
+</div>
+<div class="box-main">
+    <div class="box-search">
+        <form method="get" action="/burnin_result_check/1?{{url_add}}" style="float:left">
+
+            <span>开始日期：</span>
+            <input class="box-search-input" id="start_date" type="date" name="start_date"
+                   placeholder="开始日期">
+            <span>结束日期：</span>
+            <input class="box-search-input" id="end_date" type="date" name="end_date"
+                   placeholder="结束日期">
+            <span>运行结果：</span>
+            <input class="box-search-input" id="state" type="text" list="statelist" name="state"
+                   autocomplete="off" placeholder="运行结果">
+            <datalist id="statelist">
+                <option>PASS</option>
+                <option>FAIL</option>
+            </datalist>
+            <input type="submit" value="查询">
+        </form>
+        <form method="post" style="float:right">
+            <input type="submit" id="send_email" name="send_email" value="发送邮件">
+        </form>
+    </div>
+    <div class=" box-main-table">
+        <table width="95%" style="table-layout:fixed;">
+            <tr class="table_title">
+                <th class="td_align">ip地址</th>
+                <th class="td_align">盘符</th>
+                <th class="td_align">运行时长</th>
+                <th class="td_align">运行状态</th>
+                <th class="td_align">运行结果</th>
+                <th class="td_align">日期</th>
+            </tr>
+            {% for datas in page %}
+            <tr>
+                <td class="td_align">{{ datas.0 }}</td>
+                <td class="td_align">{{ datas.1 }}</td>
+                <td class="td_align">{{ datas.2 }}</td>
+                <td class="td_align">{{ datas.3 }}</td>
+                <td class="td_align">{{ datas.4 }}</td>
+                <td class="td_align">{{ datas.5 }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <nav aria-label="Page navigation">
+            <div class="center">
+                <ul class="pagination">
+                    <li><a><span>共{{total_results_counts}}条数据</span></a></li>
+                    {% if page.has_previous %}
+                    <li><a href="/burnin_result/{{page.previous_page_number}}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span></a></li>
+                    {% endif %}
+
+                    {% for num in page.paginator.page_range%}
+                    {%if pindex == page.number%}
+                    <li><a href="">{{ num }}</a></li>
+                    {%else%}
+                    <li><a href="/burnin_result/{{num}}">{{ num }}</a></li>
+                    {%endif%}
+                    {% endfor %}
+
+                    {% if page.has_next %}
+                    <li><a href="/burnin_result/{{page.next_page_number}}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span></a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<footer>
+    &copy; August 2020, Test of Tih Electronic
+    <br>
+    Automatic test, add, delete, modify, check.
+</footer>
+<!-- /container -->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+{# 以下三者的引用顺序是固定的#}
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.15.0/umd/popper.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

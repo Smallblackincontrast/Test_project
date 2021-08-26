@@ -1,0 +1,176 @@
+body {
+  font-family:        Verdana, Helvetica, Arial, sans-serif;
+  line-height:        1.6em;
+  font-size:          small;
+  background:         #efe5d0 url("../images/background1.gif") top left;
+  margin:             0px auto;
+}
+
+footer {
+  background-color:   #675c47;
+  color:              #efe5d0;
+  text-align:         center;
+  padding:            15px;
+  margin:             5px 0px; 
+  font-size:          90%;
+}
+
+.box-head {
+  height:             100px;
+  background-color:   #99FFFF;
+}
+
+.box-left {
+  width:              200px;
+  height:             800px;
+  background-color:   lightcyan;
+  float:              left;
+}
+
+.box-left a {
+  color:              black;
+  font-size:          1.6em;
+}
+
+.box-div {
+  border:             1px solid #000000;
+  margin-top:         2px;   
+  text-align:         center;
+  padding:            10px 0px;
+}
+
+.box-left div:hover {
+  background-color: #99FFFF
+}
+
+.box-left img {
+  width:              25px;
+  height:             25px;
+}
+
+.box-main {
+  display:            absolute;
+  height:             800px;
+  background:         url("../images/main.jpg") top left;
+  margin-left:        205px;
+  margin-top:         5px;
+  opacity:            0.9;
+}
+
+.box-search {
+  position:           absolute;
+  border:             1px thin #33FFFF;
+  background-color:   #3399FF;
+  margin-left:        10px;
+  margin-top:         10px;
+  padding:            5px 5px;
+  opacity:            0.8;
+  border-radius:      20px;
+}
+
+.box-search-input {
+  width:              200px;
+  height:             25px;
+  padding-left:       32px;
+}
+
+.icon-department {
+    position:                       absolute;left: 0；z-index:5;
+    background-image:               url("../images/department.png");
+    background-repeat:              no-repeat;
+    background-position:            1px 1px;
+    width:                          30px;
+    height:                         30px;
+}
+
+.icon-sex {
+    position:                       absolute;left: 0；z-index:5;
+    background-image:               url("../images/sex.png");
+    background-repeat:              no-repeat;
+    background-position:            1px 1px;
+    width:                          30px;
+    height:                         30px;
+}
+
+table {
+  border:             thin solid #000000;
+  caption-side:       bottom;
+  border-collapse:    collapse;
+  background-color:   #E8E8E8;
+  opacity:            1;
+}
+
+td, th {
+  border:             thin dotted gray;
+  padding:            6px;
+  font-size:          1.15em
+}
+
+.box-main-table {
+  position:              absolute;
+  border:                1px thin #000000;
+  margin-top:            70px;
+  margin-left:           10px;
+  
+}
+
+
+a:link {
+  color:                 #b76666;
+  text-decoration:       none;
+}
+a:visited {
+  color:                 #675c47;
+  text-decoration:       none;
+}
+
+tr:nth-child(even) {
+  background-color:      #F8F8F8;
+}
+
+.td_align {
+  text-align:            center;
+}
+
+.table_title {
+  background-color:      #66CCFF;
+}
+
+.a_update {
+  background-image:      url("../images/20160414160935161.gif");
+  background-repeat:     no-repeat;
+  padding-left:          20px;
+
+}
+
+.a_delete {
+  background-image:      url("../images/20160414160926864.gif");
+  background-repeat:     no-repeat;
+  padding-left:          20px;
+}
+
+.a_add {
+  background-image:      url("../images/20160414160909739.gif");
+  background-repeat:     no-repeat;
+  padding-left:          20px;
+}
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ul.pagination li a {
+    border: 1px solid #ddd; /* Gray */
+}
+div.center {
+    text-align: center;
+}

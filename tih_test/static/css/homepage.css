@@ -1,0 +1,69 @@
+body {
+	font-family:         Verdana, Helvetica, Arial, sans-serif;
+	line-height:         1.6em;
+	font-size:           small;
+    background:          #efe5d0 url("../images/background1.gif") top left;
+}
+
+#header {
+    margin:              10px 750px;
+}
+
+#header img#headerImg {
+    float:               right;
+}
+
+#award {
+    position:            absolute;
+	top:                 120px;
+    opacity:             0.6;
+
+}
+
+h1 {
+	margin-left:         500px;
+	font-size:           60px;
+	font-family:         Verdana, Helvetica, KaiTi, sans-serif;
+}
+
+#p {
+    background:          #a7cece url("../images/background.gif") top left;
+	background-repeat:   no-repeat;
+	border: 2px dashed   white;
+    background-color:    #a7cece;
+	text-align:          center;
+	padding:             2cm;
+	font-size:           2.5em;
+	margin-top:          50px;
+	margin-left:         150px;
+	margin-right:        150px;
+	border-radius:       25px;
+}
+
+#pic2 {
+    position:            absolute;
+	top:                 400px;
+    opacity:             0.4;
+    right:               30px;
+}
+
+footer {
+  background-color:      #675c47;
+  color:                 #efe5d0;
+  text-align:            center;
+  padding:               15px;
+  margin:                300px 10px 10px 10px;
+  font-size:             90%;
+}
+
+a:link {
+  color:                 #b76666;
+  text-decoration:       none;
+  border-bottom:         thin dotted #b76666;
+}
+a:visited {
+  color:                 #675c47;
+  text-decoration:       none;
+  border-bottom:         thin dotted #675c47;
+}
+
